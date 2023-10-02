@@ -2,12 +2,12 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: linear-gradient(45deg, yellow, orange);
+    background: linear-gradient(45deg, #ffeb99, #ffcc66); /* Slightly darker yellow to orange */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: cursive; /* Use a cursive font */
+    font-family: cursive;
     color: black;
 }
 
@@ -19,6 +19,6 @@ body {
 .container {
     width: 5in;
     height: 4in;
-    background-color: white;
-    border: 5px solid gray;
+    background-color: #ffffff; /* Fully white background */
+    border: 5px solid #ccc; /* A slightly darker shade of gray for the border */
 }
