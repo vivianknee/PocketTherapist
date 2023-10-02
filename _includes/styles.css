@@ -22,3 +22,25 @@ body {
     background-color: #ffffff; /* Fully white background */
     border: 5px solid #ccc; /* A slightly darker shade of gray for the border */
 }
+
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.generate-button {
+    background-color: #ccc; /* Light grey background color */
+    color: #000; /* Black text color */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button content */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Change cursor on hover */
+    font-family: cursive; /* Set the font-family to cursive */
+}
+
+
+.generate-button:hover {
+    background-color: #999; /* Darker grey background color on hover */
+}
+
