@@ -30,7 +30,7 @@ layout: none
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: linear-gradient(45deg, #ffeb99, #ffcc66); /* Slightly darker yellow to orange */
+    background: linear-gradient(45deg, #FFBF46, #FF99C9); /* Slightly darker yellow to orange */
     display: flex;
     flex-direction: column;
     justify-content: center;
