@@ -1,5 +1,6 @@
 ---
 layout: none
+baseurl: /home
 ---
 
 <html>
