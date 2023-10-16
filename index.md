@@ -18,8 +18,8 @@ baseurl: /home
         <h1>Your Pocket Therapist</h1>
         <p>Here to cheer you up!</p>
         <div>
-            <button class="index-button" type="button">BLANK</button>
-            <button class="index-button" type="button">BLANK</button>
+            <button class="index-button" type="button">ABOUT</button>
+            <button class="index-button" type="button">TEAM</button>
         </div>
     </div>
 </body>
