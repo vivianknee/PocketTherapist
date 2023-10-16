@@ -1,6 +1,5 @@
 ---
 layout: none
-baseurl: /home
 ---
 
 {%- include header.html -%} 
