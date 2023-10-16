@@ -12,6 +12,14 @@
         <li class="list">
             <a href="#">
                 <span class="icon">
+                <ion-icon name="camera-outline"></ion-icon>
+                </span>
+                <span class="text">Camera</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#">
+                <span class="icon">
                 <ion-icon name="images-outline"></ion-icon>
                 </span>
                 <span class="text">Gallery</span>
@@ -54,26 +62,25 @@
     body {
         display: flex;
         justify-content: center;
-        align-items: center;
         min-height: 110vh;
     }
 
     .navigation {
         position: relative;
-        width: 400px;
+        width: 450px;
         height: 70px;
         background: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 10px;
-        margin-top: 1cm;
+        margin-top: 1.4cm;
         margin-bottom: 0.9vh;
     }
 
     .navigation ul {
         display: flex;
-        width: 275px;
+        width: 350px;
     }
 
     .navigation ul li {
@@ -101,6 +108,7 @@
         line-height: 75px;
         font-size: 1.5em;
         text-align: center;
+        margin-left: 0.65vh;
         transition: 0.5s;
         color: black;
     }
@@ -112,12 +120,15 @@
     .navigation ul li a .text {
         position: absolute;
         color: black;
-        font-size: 1em;
+        font-size: 0.9em;
         font-weight: 400;
         letter-spacing: 0.05em;
         transition: 0.5s;
         opacity: 0;
         transform: translateY(20px);
+        margin-left: 0.7vh;
+        margin-top: 1.2vh;
+        font-family: 'Poppins', sans-serif;
     }
 
     .navigation ul li.active a .text {
@@ -130,7 +141,7 @@
         top: -50%;
         width: 70px;
         height: 70px;
-        background: blueviolet;
+        background: #FF99C9;
         border-radius:  50%;
         border: 6px solid var(--clr);
         transition: 0.5s;
@@ -138,7 +149,7 @@
 
     .indicator::before{
         content: '';
-        position:absolute;
+        position: absolute;
         top: 50%;
         left: -20%;
         width: 20px;
@@ -168,6 +179,10 @@
 
     .navigation ul li:nth-child(4).active ~ .indicator{
         transform: translateX(calc(70px * 3));
+    }
+
+    .navigation ul li:nth-child(5).active ~ .indicator{
+        transform: translateX(calc(70px * 4));
     }
 
 </style>

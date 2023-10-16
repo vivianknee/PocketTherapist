@@ -12,69 +12,62 @@ layout: none
 </head>
 
 <body>
-    {%- include header.html -%}
-    <div class="title">How Are You Feeling Today?</div>
-    <div class="container">
-        <!-- Your content goes here -->
-    </div>
-    <div class="button-container">
-        <button class="generate-button">Generate</button>
-    </div>    
-    <div class="result">
-        <p>Our AI algorithm determines you are ______!</p>
-        <p>Here's a quote to cater to your mood:</p>
+    {%- include header.html -%} 
+    <div class="content">
+        <h1>Your Pocket Therapist</h1>
+        <p>Here to cheer you up!</p>
+        <div>
+            <button class="index-button" type="button">BLANK</button>
+            <button class="index-button" type="button">BLANK</button>
+        </div>
     </div>
 </body>
 </html>
 
 <style>
 
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        background: linear-gradient(#FFBF46, #FF99C9);  
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: cursive;
-        color: black;
-    }
+body {
+    background: linear-gradient(#FFBF46, #FF99C9);  
+}
 
-    .title {
-        font-size: 60px;
-        margin-bottom: 20px;
-    }
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
 
-    .container {
-        width: 5in;
-        height: 4in;
-        background-color: #ffffff; /* Fully white background */
-        border: 5px solid #ccc; /* A slightly darker shade of gray for the border */
-    }
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
 
-    .button-container {
-        margin-top: 20px;
-        text-align: center;
-    }
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
 
-    .generate-button {
-        background-color: #ccc; /* Light grey background color */
-        color: #000; /* Black text color */
-        border: none; /* No border */
-        border-radius: 20px; /* Rounded corners */
-        padding: 10px 20px; /* Padding for button content */
-        font-size: 18px; /* Font size */
-        cursor: pointer; /* Change cursor on hover */
-        font-family: cursive; /* Set the font-family to cursive */
-    }
+.index-button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid white;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+}
 
-
-    .generate-button:hover {
-        background-color: #999; /* Darker grey background color on hover */
-    }
-
+.index-button:hover{
+    border: none;
+    background: #009688;
+}
 
 </style>
 
