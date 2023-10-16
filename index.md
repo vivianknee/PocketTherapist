@@ -6,11 +6,13 @@ layout: none
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gradient Background</title>
+    <title>Pocket Therapist</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="your-stylesheet.css">
 </head>
+
 <body>
+    {%- include header.html -%}
     <div class="title">How Are You Feeling Today?</div>
     <div class="container">
         <!-- Your content goes here -->
@@ -26,17 +28,18 @@ layout: none
 </html>
 
 <style>
+
     body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background: linear-gradient(45deg, #FFBF46, #FF99C9); /* Slightly darker yellow to orange */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: cursive;
-    color: black;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: linear-gradient(#FFBF46, #FF99C9);  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: cursive;
+        color: black;
     }
 
     .title {
