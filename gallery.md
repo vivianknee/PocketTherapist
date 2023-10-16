@@ -1,5 +1,6 @@
 ---
 layout: none
+baseurl: /gallery
 ---
 
 <html>
@@ -13,5 +14,5 @@ layout: none
 
 <body>
     {%- include header.html -%}
-    
+
 </body>
