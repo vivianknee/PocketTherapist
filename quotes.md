@@ -60,7 +60,6 @@ baseurl: /quotes
     }
     /* Notebook-style lines */
      .diary-notebook {
-        background-color: #fff;
         padding: 20px;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -77,11 +76,11 @@ baseurl: /quotes
         text-align: left;
     }
     th {
-        background-color: #007BFF;
+        background-color: #009688;
         color: #fff;
     }
     .action-buttons button {
-        background-color: #007BFF;
+        background-color: #009688;
         color: #fff;
         border: none;
         padding: 5px 10px;
@@ -115,7 +114,7 @@ baseurl: /quotes
         border-radius: 3px;
     }
     .form-container button {
-        background-color: #007BFF;
+        background-color: #009688;
         color: #fff;
         border: none;
         padding: 10px 20px;
