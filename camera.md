@@ -3,17 +3,14 @@ layout: none
 baseurl: /camera
 ---
 
+ {%- include header.html -%}
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pocket Therapist</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="your-stylesheet.css">
 </head>
 
 <body>
-    {%- include header.html -%}
     <div class="title">How Are You Feeling Today?</div>
     <div class="container">
         <!-- Your content goes here -->

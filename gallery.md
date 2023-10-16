@@ -3,6 +3,7 @@ layout: none
 baseurl: /gallery
 ---
 
+{%- include header.html -%}
 <html>
 <head>
     <meta charset="UTF-8">
@@ -13,6 +14,5 @@ baseurl: /gallery
 </head>
 
 <body>
-    {%- include header.html -%}
 
 </body>

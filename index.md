@@ -3,6 +3,7 @@ layout: none
 baseurl: /home
 ---
 
+{%- include header.html -%} 
 <html>
 <head>
     <meta charset="UTF-8">
@@ -13,7 +14,6 @@ baseurl: /home
 </head>
 
 <body>
-    {%- include header.html -%} 
     <div class="content">
         <h1>Your Pocket Therapist</h1>
         <p>Here to cheer you up!</p>
