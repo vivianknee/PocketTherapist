@@ -1,8 +1,8 @@
 <body>
 <div class="navigation">
     <ul>
-        <li class="list active">
-            <a href="{{ site.baseurl }}">
+        <li class="list">
+            <a href="{{ site.baseurl }}/">
                 <span class="icon">
                 <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -34,14 +34,14 @@
             </a>
         </li>
         <li class="list">
-            <a href="#">
+            <a href="#" id="profile-link">
                 <span class="icon">
                 <ion-icon name="person-outline"></ion-icon>
                 </span>
                 <span class="text">Profile</span>
             </a>
         </li>
-        <div class="indicator"></div>
+        <div class="indicator" id="indicator"></div>
     </ul>
 </div>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -188,12 +188,31 @@
 </style>
 
 <script>
-    const list = document.querySelectorAll('.list');
-    function activeLink(){
-        list.forEach((item) =>
-        item.classList.remove('active'));
-        this.classList.add('active');
-    }
-    list.forEach((item) =>
-    item.addEventListener('click', activeLink));
+    const currentPage = window.location.pathname;
+    const listItems = document.querySelectorAll('.list');
+    const indicator = document.querySelector('.indicator');
+
+    listItems.forEach((item, index) => {
+        const link = item.querySelector('a');
+        if (link.getAttribute('href') === currentPage) {
+            item.classList.add('active');
+            indicator.style.transform = `translateX(calc(70px * ${index}))`;
+        }
+    });
+
+    listItems.forEach((item, index) => {
+        const link = item.querySelector('a');
+        link.addEventListener('click', (event) => {
+        
+            // Remove the 'active' class from all items
+            listItems.forEach((listItem) => {
+                listItem.classList.remove('active');
+            });
+
+            // Add the 'active' class to the clicked item
+            item.classList.add('active');
+            indicator.style.transform = `translateX(calc(70px * ${index})`;
+        });
+    });
+      
 </script>
