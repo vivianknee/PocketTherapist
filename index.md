@@ -8,8 +8,6 @@ layout: none
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pocket Therapist</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="your-stylesheet.css">
 </head>
 
 <body>
@@ -21,8 +19,6 @@ layout: none
             <button class="index-button" type="button">TEAM</button>
         </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 </html>
 
 <style>

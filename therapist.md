@@ -13,7 +13,7 @@ layout: none
 </head>
 
 <body>
-    <div class="content">
+    <div>
         <div style="position: fixed; bottom: 10px; right: 10px;">
             <button id="startChatButton" class="btn btn-primary" type="button">Talk to a therapist!</button>
         </div>
@@ -37,15 +37,6 @@ layout: none
 
 body {
     background: linear-gradient(#FFBF46, #FF99C9);  
-}
-
-.content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
 }
 
 </style>
