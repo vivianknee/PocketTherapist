@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Interface</title>
+    <style>
+        .user-message {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+            align-self: flex-end; /* Push user messages to the right side */
+        }
+    </style>
+    
+</head>
+<body style="background-color: lightblue;">
+    <div id="chatContainer">
+        <div>Hello, this is your AI Therapist! What's on your mind?</div>
+    </div>
+    <input type="text" id="userInput" placeholder="What are you thinking?" />
+    <button id="sendMessage">Send</button>
+</body>
+<script>
+    $(function() {
+        // Function to create and display a user message
+        function displayUserMessage(message) {
+            const chatContainer = document.getElementById("chatContainer");
+            const userMessageElement = document.createElement("div");
+            userMessageElement.className = "user-message";
+            userMessageElement.innerText = message;
+            chatContainer.appendChild(userMessageElement);
+        }
+
+        // Handle sending a message when the "Send" button is clicked
+        $("#sendMessage").on("click", function(evt) {
+            const userInput = document.getElementById("userInput");
+            const userMessage = userInput.value;
+            displayUserMessage(userMessage);
+
+            // Add code here later to send message to backend
+
+            // Clear the input field
+            userInput.value = "";
+        });
+    });
+</script>
+</html>

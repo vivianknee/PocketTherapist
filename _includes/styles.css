@@ -11,6 +11,7 @@
 
 body{
    background-color: #f3f5f9;
+   background-image: radial-gradient(rgb(255, 252, 160), rgb(248, 212, 180), rgb(241, 160, 102),);
 }
 
 .wrapper{
@@ -21,13 +22,13 @@ body{
 .wrapper .sidebar{
   width: 200px;
   height: 100%;
-  background: #4b4276;
+  background: rgb(255, 252, 160);
   padding: 30px 0px;
   position: fixed;
 }
 
 .wrapper .sidebar h2{
-  color: #fff;
+  color: #4e0c0c;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
