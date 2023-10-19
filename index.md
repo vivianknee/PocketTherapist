@@ -18,6 +18,7 @@ layout: none
             <button class="index-button" type="button">ABOUT</button>
             <button class="index-button" type="button">TEAM</button>
         </div>
+    </div>
 </body>
 </html>
 
