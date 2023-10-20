@@ -25,6 +25,40 @@ baseurl: /camera
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gradient Background</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="your-stylesheet.css">
+</head>
+<body>
+    <div class="title">Take a Photo To Determine Your Mood</div>
+    <div class="container">
+        <!-- Your content goes here -->
+    </div>   
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>On-Screen Camera</title>
+</head>
+<body>
+    <div id="camera-container">
+        <video id="camera" autoplay></video>
+    </div>
+    <button id="capture-button">Capture Photo</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
 <style>
 
     body {
