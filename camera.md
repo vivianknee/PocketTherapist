@@ -10,21 +10,6 @@ baseurl: /camera
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-    <div class="title">How Are You Feeling Today?</div>
-    <div class="container">
-        <!-- Your content goes here -->
-    </div>
-    <div class="button-container">
-        <button class="generate-button">Generate</button>
-    </div>    
-    <div class="result">
-        <p>Our AI algorithm determines you are ______!</p>
-        <p>Here's a quote to cater to your mood:</p>
-    </div>
-</body>
-</html>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
