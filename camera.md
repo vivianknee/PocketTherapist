@@ -10,7 +10,6 @@ baseurl: /camera
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Gradient Background</title>
@@ -19,13 +18,9 @@ baseurl: /camera
 </head>
 <body>
     <div class="title">Take a Photo To Determine Your Mood</div>
-    <div class="container">
-        <!-- Your content goes here -->
-    </div>   
 </body>
 </html>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
