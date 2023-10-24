@@ -10,20 +10,34 @@ baseurl: /camera
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+<html lang="en">
+<head>
+    <title>Gradient Background</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="your-stylesheet.css">
+</head>
 <body>
-    <div class="title">How Are You Feeling Today?</div>
-    <div class="container">
-        <!-- Your content goes here -->
-    </div>
-    <div class="button-container">
-        <button class="generate-button">Generate</button>
-    </div>    
-    <div class="result">
-        <p>Our AI algorithm determines you are ______!</p>
-        <p>Here's a quote to cater to your mood:</p>
-    </div>
+    <div class="title">Take a Photo To Determine Your Mood</div>
 </body>
 </html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>On-Screen Camera</title>
+</head>
+<body>
+    <div id="camera-container">
+        <video id="camera" autoplay></video>
+    </div>
+    <button id="capture-button">Capture Photo</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
 
 <style>
 
