@@ -48,6 +48,11 @@ baseurl: /quotes
 </body>
 </html>
 
+<script>
+    
+
+</script>
+
  <style>
     body {
         background-color: linear-gradient(#FFBF46, #FF99C9);  
