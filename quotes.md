@@ -49,7 +49,24 @@ baseurl: /quotes
 </html>
 
 <script>
+    var emotion = document.getElementById('emotion');
+    var quote = document.getElementById('quote');
+
+    function postQuote() {
+        fetch('https://ptbackend.stu.nighthawkcodingsociety.com/api/quote/add/', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ "id": 78912 })
+        })
+            .then(response => response.json())
+            .then(response => console.log(JSON.stringify(response)))      
+    }
+
     
+
 
 </script>
 

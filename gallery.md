@@ -14,13 +14,19 @@ baseurl: /gallery
 {%- include header.html -%}
 <body class="gallery-body">
     <h1 class="title">Quotes Gallery</h1>
-    <div class="img-gallery">
-        <img src="images/happy.png">
-        <img src="images/sad.png">
-        <img src="images/angry.png">
-        <img src="images/happy.png">
-        <img src="images/sad.png">
-        <img src="images/angry.png">
+    <div class="img-gallery" id="quote-root">
+        <div class="img-wrapper">
+            <img class="blur" src="images/happy.png">
+            <div class="content fade">temporary quote</div>
+        </div>
+        <div class="img-wrapper">
+            <img src="images/happy.png">
+            <div class="content fade">temporary quote</div>
+        </div>
+        <div class="img-wrapper">
+            <img src="images/happy.png">
+            <div class="content fade">temporary quote</div>
+        </div>
     </div>
 </body>
 
@@ -37,19 +43,53 @@ baseurl: /gallery
     left: 10%;
     width: 80%;
     display: grid;
+    overflow: hidden;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 25px;
 }
 
-.img-gallery img{
+.img-wrapper {
+    position:relative;
+    overflow: hidden;
+}
+
+.img-wrapper > img {
+    display: block;
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
     width: 100%;
     cursor: pointer;
 }
 
-.img-gallery img:hover{
-    transform: rotateY(180deg);
+.img-wrapper > .content {
+    position: absolute;
+    inset: 0;
+    font-size: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.img-wrapper > img,
+.img-wrapper > .content {
+    transition: 200ms ease-in-out;
+}
+
+.img-wrapper > .content.fade {
+    opacity: 0;
+}
+
+.img-wrapper:hover > .content.fade {
+    opacity: 1;
+}
+
+.img-wrapper:hover > img.blur {
+    filter: blur(5px);
+}
 
 .title{
     width: 100%;
@@ -62,5 +102,47 @@ baseurl: /gallery
 </style>
 
 <script>
-   
+
+    var quotes = [{"id":1,"quote":"When life gives you lemons, make lemonade","emotion":"happy"},{"id":2,"quote":"Keep calm and carry on","emotion":"sad"}];
+
+   function getAllQuotes() {
+        fetch('https://ptbackend.stu.nighthawkcodingsociety.com/api/quote/').then(function(response) {
+            return response.json();
+        }).then(function(data) {
+            console.log(data);
+        }).catch(function(err){
+            console.log(err);
+        });
+    }
+
+    function processQuotes(quotes) {
+        // find the root div
+         quotes.forEach(quote =>{
+            //outer most div
+            const root_div = document.getElementById("quote-root");
+
+            //individual quote div
+            const quote_div = document.createElement("div");
+            quote_div.className = "img-wrapper";
+
+            //img inside quote div
+            const img = document.createElement('img');
+            img.src = "{{ site.baseurl }}/images/happy.png";
+            img.className = "blur";
+
+            //content aka quote inside quote div
+            const content_div = document.createElement("div");
+            content_div.className = "content fade";
+            content_div.innerHTML += quote.quote;
+
+            //append img and content to quote div
+            quote_div.appendChild(img);
+            quote_div.appendChild(content_div);
+
+            root_div.appendChild(quote_div);
+        });
+    }
+
+    processQuotes(quotes);
+
 </script>
