@@ -8,8 +8,6 @@ baseurl: /gallery
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pocket Therapist</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="your-stylesheet.css">
 </head>
 {%- include header.html -%}
 <body class="gallery-body">
@@ -103,17 +101,24 @@ baseurl: /gallery
 
 <script>
 
-    var quotes = [{"id":1,"quote":"When life gives you lemons, make lemonade","emotion":"happy"},{"id":2,"quote":"Keep calm and carry on","emotion":"sad"}];
+   var quotes = [{"id":1,"quote":"When life gives you lemons, make lemonade","emotion":"happy"},{"id":2,"quote":"Keep calm and carry on","emotion":"sad"},{"id":3,"quote":"Don't let you emotions control you","emotion":"angry"}];
 
    function getAllQuotes() {
-        fetch('https://ptbackend.stu.nighthawkcodingsociety.com/api/quote/').then(function(response) {
-            return response.json();
-        }).then(function(data) {
-            console.log(data);
-        }).catch(function(err){
-            console.log(err);
-        });
+        // fetch('https://ptbackend.stu.nighthawkcodingsociety.com/api/quote/').then(function(response) {
+        //     return response.json();
+        // }).then(function(data) {
+        //     console.log(data);
+        // }).catch(function(err){
+        //     console.log(err);
+        // });
+
+        const [quotes, setQuotes] = useState();
+
+        fetch('https://ptbackend.stu.nighthawkcodingsociety.com/api/quote/', requestOptions)
+          .then(response => response.json())
+          .then(data => setQuotes(data));  
     }
+
 
     function processQuotes(quotes) {
         // find the root div
@@ -127,8 +132,22 @@ baseurl: /gallery
 
             //img inside quote div
             const img = document.createElement('img');
-            img.src = "{{ site.baseurl }}/images/happy.png";
-            img.className = "blur";
+
+           if (quote.emotion == "happy"){
+                img.src = "{{ site.baseurl }}/images/happy.png";
+                img.className = "blur";
+            }
+            else if (quote.emotion == "sad"){
+                img.src = "{{ site.baseurl }}/images/sad.png";
+                img.className = "blur";
+            }
+            else if(quote.emotion == "angry"){
+                img.src = "{{ site.baseurl }}/images/angry.png";
+                img.className = "blur";
+            }
+            else {
+                console.log("invalid emotion");
+            }
 
             //content aka quote inside quote div
             const content_div = document.createElement("div");
