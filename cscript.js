@@ -52,6 +52,7 @@ video.addEventListener('play', () => {
 // Function to capture and display the raw response
 document.getElementById('captureEmotionButton').addEventListener('click', captureEmotion);
 
+
 function captureEmotion() {
     if (detectionComplete) {
         if (detections && detections.length > 0) {
@@ -68,7 +69,21 @@ function captureEmotion() {
             }
 
             // Display the highest emotion
-            alert(`Highest Emotion: ${maxEmotion}`);
+            alert(` Emotion: ${maxEmotion}`);
+            const apiUrl = `https://ptbackend.stu.nighthawkcodingsociety.com/api/quote/${maxEmotion}`;
+
+            
+            // Make a fetch request to the backend
+            fetch(apiUrl)
+                .then(response => response.text())
+                .then(data => {
+                    console.log(`Emotion: ${maxEmotion}`);
+                    console.log(`Quote: ${data}`);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+
         } else {
             alert('No face detected.');
         }
@@ -76,6 +91,7 @@ function captureEmotion() {
         alert('Detection is not complete yet. Please wait.');
     }
 }
+
 
 
 
