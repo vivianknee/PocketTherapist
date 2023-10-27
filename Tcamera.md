@@ -13,8 +13,6 @@ baseurl: /camera
 <html lang="en">
 <head>
     <title>Gradient Background</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="your-stylesheet.css">
 </head>
 <script defer src="/face-api.min.js"></script>
 <script defer src="/cscript.js"></script>
