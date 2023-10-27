@@ -74,7 +74,6 @@ function captureEmotion() {
             }
 
             // Display the highest emotion
-            alert(` Emotion: ${maxEmotion}`);
             const apiUrl = `https://ptbackend.stu.nighthawkcodingsociety.com/api/quote/${maxEmotion}`;
 
             
