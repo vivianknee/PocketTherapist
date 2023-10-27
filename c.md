@@ -16,6 +16,8 @@ baseurl: /camera
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="your-stylesheet.css">
 </head>
+<script defer src="/cscript.js"></script>
+
 
 <style>
     body {
