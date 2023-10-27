@@ -52,6 +52,11 @@ video.addEventListener('play', () => {
 // Function to capture and display the raw response
 document.getElementById('captureEmotionButton').addEventListener('click', captureEmotion);
 
+function updateEmotionResult(emotion, quote) {
+    document.getElementById('emotion').textContent = emotion;
+    document.getElementById('quote').textContent = quote;
+}
+
 
 function captureEmotion() {
     if (detectionComplete) {
@@ -77,6 +82,7 @@ function captureEmotion() {
             fetch(apiUrl)
                 .then(response => response.text())
                 .then(data => {
+                    updateEmotionResult(maxEmotion, data);
                     console.log(`Emotion: ${maxEmotion}`);
                     console.log(`Quote: ${data}`);
                 })
