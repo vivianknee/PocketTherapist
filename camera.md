@@ -1,6 +1,5 @@
 ---
 layout: none
-baseurl: /camera
 ---
 
  {%- include header.html -%}
