@@ -1,17 +1,42 @@
-
-{%- include header.html -%}
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<html lang="en">
-<head>
-    
-</head>
 <script defer src="/face-api.min.js"></script>
 <script defer src="/cscript.js"></script>
+
+
+<body>
+
+    
+    
+    <video id="video" width="720" height="560" autoplay muted class="video">  </video>
+    
+    <button id="captureEmotionButton">Capture Emotion</button>
+
+
+    <div id="emotionResult" class="emotionResult">
+        Emotion: <span id="emotion"></span><br>
+        Quote: <span id="quote"></span>
+    </div>
+
+    <script>
+        // JavaScript code for handling emotion detection and updating the HTML
+        function updateEmotionResult(emotion, quote) {
+            document.getElementById('emotion').textContent = emotion;
+            document.getElementById('quote').textContent = quote;
+        }
+
+        document.getElementById('captureEmotionButton').addEventListener('click', function () {
+            captureEmotion().then(result => {
+                updateEmotionResult(result.emotion, result.quote);
+            });
+        });
+    </script>
+
+</body>
 
 
 <style>
@@ -64,31 +89,6 @@
 
 </style>
 
-<body>
-
-    <video id="video" width="720" height="560" autoplay muted class="video">  </video>
-    
-    <button id="captureEmotionButton">Capture Emotion</button>
-
-
-    <div id="emotionResult" class="emotionResult">
-        Emotion: <span id="emotion"></span><br>
-        Quote: <span id="quote"></span>
-    </div>
-
-    <script>
-        // JavaScript code for handling emotion detection and updating the HTML
-        function updateEmotionResult(emotion, quote) {
-            document.getElementById('emotion').textContent = emotion;
-            document.getElementById('quote').textContent = quote;
-        }
-
-        document.getElementById('captureEmotionButton').addEventListener('click', function () {
-            captureEmotion().then(result => {
-                updateEmotionResult(result.emotion, result.quote);
-            });
-        });
-    </script>
-
-</body>
 </html>
+
+
