@@ -1,6 +1,6 @@
 ---
 layout: none
-baseurl: /camera1
+baseurl: /camerawrong
 ---
 
  {%- include header.html -%}
