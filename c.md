@@ -1,6 +1,6 @@
 ---
 layout: none
-baseurl: /cameratest
+baseurl: /c
 ---
 <html>
 <head>
