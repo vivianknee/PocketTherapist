@@ -74,7 +74,7 @@ function captureEmotion() {
             }
 
             // Display the highest emotion
-            const apiUrl = `https://ptbackend.stu.nighthawkcodingsociety.com/api/quote/${maxEmotion}`;
+            const apiUrl = `http://localhost:8077/api/quote/${maxEmotion}`;
 
             
             // Make a fetch request to the backend
