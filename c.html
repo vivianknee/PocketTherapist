@@ -6,10 +6,14 @@
 
 
 <body>
-    <video id="video" width="620" height="480" autoplay muted class="video">  </video>
     <button id="captureEmotionButton">Capture Emotion</button>
-    <button onclick="location.href='https://vivianknee.github.io/PocketTherapist'" class="func-button" type="button">Home</button>
-        <button class="func-button2" type="button">Add to Gallery</button>
+    <div class="button-container">
+        <button class="func-button" type="button">Home</button>
+        <button class="func-button" type="button">Add to Gallery</button>
+    </div>
+    <div class="video-container">
+        <video id="video" width="620" height="480" autoplay muted class="video"></video>
+    </div>
     <div id="emotionResult" class="emotionResult">
         Emotion: <span id="emotion"></span><br>
         Quote: <span id="quote"></span>
@@ -57,7 +61,7 @@
         cursor: pointer; /* Change cursor to a pointer on hover */
         border-radius: 5px; /* Rounded corners */
         position: absolute;
-        top: 0.5ch;
+        top: 1ch;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
@@ -67,8 +71,8 @@
 
     .emotionResult {
         position: absolute;
-        bottom: 0ch;
-        font-size: 35px;
+        bottom: 1ch;
+        font-size: 30px;
         color: white;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
@@ -76,37 +80,28 @@
     .video {
         border: 10px solid white; /* Add a white border */
         border-radius: 8vh;
+    }
 
+    .video-container {
+        display: flex;
+    }
 
+    .button-container {
+        display: flex;
+        position: absolute;
+        top: 7ch;
     }
 
     .func-button {
-        position: relative;
         cursor: pointer;
-        justify-content: center;
-        background-color: #1eb6af; 
-        color: white; /* White text color */
-        padding: 4px 10px; /* Padding around the text */
-        font-size: 22px; /* Font size */
-        border: none; /* Remove the button border */
-        cursor: pointer; /* Change cursor to a pointer on hover */
-        border-radius: 5px; /* Rounded corners */
-        position: absolute;
-        top: 3.25ch;
-    }
-    .func-button2 {
-        position: right;
+        background-color: #1eb6af;
+        color: white;
+        padding: 7px 10px;
+        font-size: 18px;
+        border: none;
         cursor: pointer;
-        justify-content: right;
-        background-color: #1eb6af; 
-        color: white; /* White text color */
-        padding: 4px 10px;/* Padding around the text */
-        font-size: 22px; /* Font size */
-        border: none; /* Remove the button border */
-        cursor: pointer; /* Change cursor to a pointer on hover */
-        border-radius: 5px; /* Rounded corners */
-        position: absolute;
-        top: 6ch;
+        border-radius: 5px;
+        margin-right: 15px;
     }
 
     .func-button:hover {
