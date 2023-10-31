@@ -13,18 +13,6 @@ baseurl: /gallery
 <body class="gallery-body">
     <h1 class="title">Quotes Gallery</h1>
     <div class="img-gallery" id="quote-root">
-        <div class="img-wrapper">
-            <img class="blur" src="images/happy.png">
-            <div class="content fade">temporary quote</div>
-        </div>
-        <div class="img-wrapper">
-            <img src="images/happy.png">
-            <div class="content fade">temporary quote</div>
-        </div>
-        <div class="img-wrapper">
-            <img src="images/happy.png">
-            <div class="content fade">temporary quote</div>
-        </div>
     </div>
 </body>
 
@@ -64,7 +52,7 @@ baseurl: /gallery
 .img-wrapper > .content {
     position: absolute;
     inset: 0;
-    font-size: 2rem;
+    font-size: 1.3rem;
     padding: 1rem;
     background: rgba(255, 255, 255, .4);
     display: flex;
@@ -101,24 +89,18 @@ baseurl: /gallery
 
 <script>
 
-   var quotes = [{"id":1,"quote":"When life gives you lemons, make lemonade","emotion":"happy"},{"id":2,"quote":"Keep calm and carry on","emotion":"sad"},{"id":3,"quote":"Don't let you emotions control you","emotion":"angry"}];
-
-   function getAllQuotes() {
-        // fetch('https://ptbackend.stu.nighthawkcodingsociety.com/api/quote/').then(function(response) {
-        //     return response.json();
-        // }).then(function(data) {
-        //     console.log(data);
-        // }).catch(function(err){
-        //     console.log(err);
-        // });
-
-        const [quotes, setQuotes] = useState();
-
-        fetch('https://ptbackend.stu.nighthawkcodingsociety.com/api/quote/', requestOptions)
-          .then(response => response.json())
-          .then(data => setQuotes(data));  
+    function getAllQuotes() {
+        fetch('https://ptbackend.stu.nighthawkcodingsociety.com/api/quote/')
+            .then(response => response.json())
+            .then(data => {
+                processQuotes(data);  
+            })
+            .catch(err => {
+                console.log(err);
+            });
     }
 
+    getAllQuotes(); 
 
     function processQuotes(quotes) {
         // find the root div
