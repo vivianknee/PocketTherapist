@@ -12,7 +12,7 @@ layout: none
 
 <body>
     <div class="content">
-        <h1>Your Pocket Therapist</h1>
+        <h1 class="text"><span id="typing-text">Your Pocket Therapist</span><span id="cursor"></span></h1>
         <p>Here to cheer you up!</p>
         <div>
             <button class="index-button" type="button">ABOUT</button>
@@ -40,6 +40,26 @@ body {
 .content h1 {
     font-size: 70px;
     margin-top: 80px;
+}
+
+#typing-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(14) forwards;
+}
+
+#cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
 
 .content p {
