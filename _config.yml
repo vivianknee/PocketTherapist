@@ -4,6 +4,8 @@ owner_name: Tirth Thakkar
 github_username: vivianknee
 github_repo: "PocketTherapist"
 baseurl: "/PocketTherapist"
+url: "https://vivianknee.github.io"
+repository: "vivianknee/PocketTherapist"
 remote_theme: jekyll/minima
 minima:
   social_links:
