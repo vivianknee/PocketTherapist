@@ -2,90 +2,108 @@
 layout: none
 ---
 
-{%- include header.html -%} 
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pocket Therapist</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/pocket-therapist.css">
 </head>
 
 <body>
-    <div class="content">
-        <h1 class="text"><span id="typing-text">Your Pocket Therapist</span><span id="cursor"></span></h1>
-        <p>Here to cheer you up!</p>
-        <div>
-            <button class="index-button" type="button">ABOUT</button>
-            <button class="index-button" type="button">TEAM</button>
+    {%- include header.html -%}
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" id="typing-text">Your Pocket Therapist</h1>
+            <p class="hero-subtitle">Here to cheer you up!</p>
+            <div class="hero-actions">
+                <a href="{{ site.baseurl }}/c" class="btn-primary">Get Started</a>
+                <a href="{{ site.baseurl }}/gallery" class="btn-outline">Browse Gallery</a>
+            </div>
         </div>
+        <div class="hero-bg-orb hero-bg-orb--lavender"></div>
+        <div class="hero-bg-orb hero-bg-orb--pink"></div>
     </div>
 </body>
 </html>
 
 <style>
-
 body {
-    background: linear-gradient(#FFBF46, #FF99C9);  
+    background: #0f1117;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.content {
+.hero {
     width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
     text-align: center;
-    color: #fff;
+    z-index: 1;
+    animation: fadeInUp 0.8s ease forwards;
 }
 
-.content h1 {
-    font-size: 70px;
-    margin-top: 80px;
-}
-
-#typing-text {
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    background: linear-gradient(135deg, #b4a7d6, #d4a5c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 3s steps(14) forwards;
+    width: 0;
+    border-right: 3px solid #b4a7d6;
+    max-width: 21ch;
+    animation: typing 3s steps(21) forwards, blink 0.7s step-end infinite;
 }
 
-#cursor {
-    animation: blink 1s infinite;
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 400;
+    margin-bottom: 44px;
+    letter-spacing: -0.01em;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
 }
 
-@keyframes blink {
-    50% { opacity: 0; }
+.hero-bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.12;
+    pointer-events: none;
 }
 
-.content p {
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
+.hero-bg-orb--lavender {
+    width: 500px;
+    height: 500px;
+    background: #b4a7d6;
+    top: 5%;
+    right: 15%;
 }
 
-.index-button {
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid white;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    overflow: hidden;
+.hero-bg-orb--pink {
+    width: 400px;
+    height: 400px;
+    background: #d4a5c4;
+    bottom: 5%;
+    left: 20%;
 }
-
-.index-button:hover{
-    border: none;
-    background: #009688;
-}
-
 </style>
-
