@@ -138,7 +138,7 @@ function getAllQuotes() {
     fetch('https://pt-backend-long-river-5087.fly.dev/api/quote/')
         .then(response => response.json())
         .then(data => {
-            renderQuotes(data);
+            renderQuotes(data.reverse());
         })
         .catch(err => {
             console.log(err);
