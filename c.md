@@ -291,7 +291,7 @@ function captureEmotion() {
                 }
             }
 
-            const apiUrl = `http://localhost:8077/api/quote/${maxEmotion}`;
+            const apiUrl = `https://pt-backend-long-river-5087.fly.dev/api/quote/${maxEmotion}`;
 
             fetch(apiUrl)
                 .then(response => response.text())

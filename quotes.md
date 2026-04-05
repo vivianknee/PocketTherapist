@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!quote) return;
 
-        const response = await fetch('http://localhost:8077/api/quote/add', {
+        const response = await fetch('https://pt-backend-long-river-5087.fly.dev/api/quote/add', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ emotion, quote }),
@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleDelete(e) {
         const id = e.target.dataset.id;
         if (confirm('Delete this quote?')) {
-            fetch(`http://localhost:8077/api/quote/delete/${id}`, { method: 'DELETE' })
+            fetch(`https://pt-backend-long-river-5087.fly.dev/api/quote/delete/${id}`, { method: 'DELETE' })
                 .then(res => {
                     if (res.ok) {
                         e.target.closest('[style]').remove();
@@ -427,7 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const meta = bubble.querySelector('.message-emotion-tag');
             const emotionText = bubble.querySelector('.message-meta span:last-child').textContent;
 
-            fetch(`http://localhost:8077/api/quote/update/${id}`, {
+            fetch(`https://pt-backend-long-river-5087.fly.dev/api/quote/update/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ emotion: emotionText, quote: newQuote }),

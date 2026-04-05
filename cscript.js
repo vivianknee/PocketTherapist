@@ -4,13 +4,13 @@ let detectionComplete = false;
 
 // Loading all the models ** github downloads? 
 Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
+    faceapi.nets.tinyFaceDetector.loadFromUri('/PocketTherapist/models'),
     // Registers facial features
-    faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
+    faceapi.nets.faceLandmark68Net.loadFromUri('/PocketTherapist/models'),
     // Box around face
-    faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
+    faceapi.nets.faceRecognitionNet.loadFromUri('/PocketTherapist/models'),
     // Emotion detector
-    faceapi.nets.faceExpressionNet.loadFromUri('/models'),
+    faceapi.nets.faceExpressionNet.loadFromUri('/PocketTherapist/models'),
 ]).then(startVideo())
 
 
@@ -74,7 +74,7 @@ function captureEmotion() {
             }
 
             // Display the highest emotion
-            const apiUrl = `http://localhost:8077/api/quote/${maxEmotion}`;
+            const apiUrl = `https://pt-backend-long-river-5087.fly.dev/api/quote/${maxEmotion}`;
 
             
             // Make a fetch request to the backend
